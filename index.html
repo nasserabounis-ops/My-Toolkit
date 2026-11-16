@@ -3,17 +3,27 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Advisor Toolkit</title>
-<meta name="theme-color" content="#1F3864">
+<meta name="theme-color" content="#0E1A33">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="icon-192.png">
 <link rel="apple-touch-icon" href="icon-192.png">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
 <link rel="stylesheet" href="style.css">
+<script>try{var t=JSON.parse(localStorage.getItem('advtk.v1')||'{}').theme;if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
 </head><body>
-<header id="top"><button id="back" aria-label="Back" hidden>&#8592;</button><div id="ttl">Advisor Toolkit</div><div id="tools"><button id="pin" hidden aria-label="Pin">&#9734;</button><button id="menu" aria-label="Menu">&#8942;</button></div></header>
-<main id="app"></main>
-<div id="sheetmenu" class="pop" hidden></div>
+<div id="shell">
+  <aside id="side" aria-label="Navigation"></aside>
+  <div id="scrim"></div>
+  <div id="main">
+    <header id="bar"></header>
+    <main id="app" tabindex="-1"></main>
+  </div>
+  <nav id="tabs" aria-label="Main"></nav>
+</div>
+<div id="pal" hidden></div>
+<div id="modal" hidden></div>
+<div id="pop" class="pop" hidden></div>
 <div id="toast" hidden></div>
 <script src="engine.js"></script>
 <script src="model.js"></script>
